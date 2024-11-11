@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://rublenkot.github.io/task1_list ",
+  "homepage": "https://github.com/rublenkot/task_list1.git",
   "eslintConfig": {
     "extends": [
       "react-app",
