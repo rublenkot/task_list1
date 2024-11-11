@@ -1,0 +1,158 @@
+/* Основні стилі сторінки */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e7f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+
+/* Стилі для форми введення нового завдання */
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #5dade2;
+}
+
+button.add-button {
+  padding: 12px 20px;
+  background-color: #5dade2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.add-button:hover {
+  background-color: #3498db;
+}
+
+/* Стилі для кнопок фільтра */
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button.all {
+  background-color: #5dade2;
+}
+
+.filter-buttons button.completed {
+  background-color: #58d68d;
+}
+
+.filter-buttons button.incomplete {
+  background-color: #f5b041;
+}
+
+.filter-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Стилі для списку завдань */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Стилі для завершених завдань (лише для тексту) */
+li.completed span {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+/* Кнопки дій для кожного завдання */
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.task-buttons button {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-buttons .toggle-complete {
+  background-color: #58d68d;
+}
+
+.task-buttons .toggle-complete:hover {
+  background-color: #45b077;
+}
+
+.task-buttons .delete {
+  background-color: #e74c3c;
+}
+
+.task-buttons .delete:hover {
+  background-color: #c0392b;
+}
+
+/* Додаткові стилі для кнопок, коли завдання завершено */
+li.completed .task-buttons button {
+  opacity: 0.5;
+  cursor: not-allowed; /* Змінює курсор на заблокований, щоб вказати на недоступність кнопки */
+}
